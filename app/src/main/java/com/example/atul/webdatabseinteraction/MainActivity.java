@@ -58,8 +58,8 @@ public class MainActivity extends AppCompatActivity {
                     protected Map<String, String> getParams() throws AuthFailureError {
                         Map<String,String> myvalues = new HashMap<String, String>();
                         myvalues.put("user_name",user_name);
-                        myvalues.put("user",user_mail);
                         myvalues.put("user_password",pass);
+                        myvalues.put("user_email",user_mail);
                         return myvalues;
 
                     }
