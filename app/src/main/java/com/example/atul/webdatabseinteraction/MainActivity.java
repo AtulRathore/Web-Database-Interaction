@@ -20,7 +20,7 @@ import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
 
-    String url="http://serverexample12.coolpage.biz/Myinsert12.php";
+    String url="http://serverexample12.16mb.com/MyinsertCopy.php";
     EditText name,email,password;
     Button btnRegister;
     RequestQueue requestQueue;
@@ -50,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
                 }, new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError volleyError) {
+                        //Handle Response from server in Alert Dialogue
                         Toast.makeText(MainActivity.this, "There is some isssue in registration please try again !!!", Toast.LENGTH_SHORT).show();
 
                     }
@@ -58,8 +59,8 @@ public class MainActivity extends AppCompatActivity {
                     protected Map<String, String> getParams() throws AuthFailureError {
                         Map<String,String> myvalues = new HashMap<String, String>();
                         myvalues.put("user_name",user_name);
-                        myvalues.put("user_password",pass);
                         myvalues.put("user_email",user_mail);
+                        myvalues.put("user_password",pass);
                         return myvalues;
 
                     }
